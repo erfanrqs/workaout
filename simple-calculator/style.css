@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #e0e0e0;
+}
+
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(./ds_digital/RobotoCondensed.woff);
+  }
+  @font-face{
+      font-family: DigitalNumbers;
+      src: url(./ds_digital/DigitalNumbers.woff);
+  }
+.key {
+    font-size: 1.5em;
+}
+
+#app {
+    height: calc(100% - 30%);
+    width: calc(100% - 20%);
+    max-width: 580px;
+    min-height: 280px;
+    position: relative;
+}
+
+#result {
+    text-align: right;
+    font-size: 3.5em;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 72%);
+    width: 100%;
+    background-color: #eee;
+    color: #444;
+    font-family: "DigitalNumbers";
+}
+
+#keypad {
+    width: 100%;
+    height: calc(100% - 28%);
+    color: #ddd;
+    font-family: "RobotoCondensed";
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nums {
+    height: 100%;
+    width: calc(100% - 46%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nums .key {
+    width: 33.333333%;
+    height: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nums .key:nth-child(odd) {
+    background-color: #095057;
+}
+
+#nums .key:nth-child(even) {
+    background-color: #19676E;
+}
+
+#ops {
+    height: 100%;
+    width: calc(100% - 54%);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#ops .key {
+    background-color: #D34E47;
+    width: 50%;
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ops .key:nth-child(odd){
+    background-color: #D34E47;
+}
+
+#ops .key:nth-child(even) {
+    background-color: #B52D26;
+}
+
+#ops .key:last-child {
+    background-color: #C43E37;
+    height: 50%;
+}
+
+#ops .key:nth-last-child(5) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#ops .key:nth-last-child(6) {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 75%);
+}
+#ops .key:nth-last-of-type(3){
+    background-color: #B52D26;
+}
+#ops .key:nth-last-of-type(2){
+    background-color: #D34E47;
+}
